@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Predictive Maintenance</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Predictive Maintenance for Cars</h1>
+        <form action="/predict" method="post" class="mt-4">
+            <div class="form-group">
+                <label for="engine_temp">Engine Temperature (°C):</label>
+                <input type="number" step="any" id="engine_temp" name="engine_temp" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="brake_thickness">Brake Pad Thickness (mm):</label>
+                <input type="number" step="any" id="brake_thickness" name="brake_thickness" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="tire_pressure">Tire Pressure (PSI):</label>
+                <input type="number" step="any" id="tire_pressure" name="tire_pressure" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="anomaly_indication">Anomaly Indication:</label>
+                <select id="anomaly_indication" name="anomaly_indication" class="form-control" required>
+                    <option value="0">No Anomaly</option>
+                    <option value="1">Anomaly Present</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mileage">Mileage (km):</label>
+                <input type="number" step="any" id="mileage" name="mileage" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="oil_quality">Oil Quality:</label>
+                <select id="oil_quality" name="oil_quality" class="form-control" required>
+                    <option value="0">Good</option>
+                    <option value="1">Fair</option>
+                    <option value="2">Poor</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="brake_fluid_level">Brake Fluid Level:</label>
+                <select id="brake_fluid_level" name="brake_fluid_level" class="form-control" required>
+                    <option value="0">Low</option>
+                    <option value="1">Normal</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="battery_voltage">Battery Voltage (V):</label>
+                <input type="number" step="any" id="battery_voltage" name="battery_voltage" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="tire_wear">Tire Wear (%):</label>
+                <input type="number" step="any" id="tire_wear" name="tire_wear" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

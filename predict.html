@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Prediction Result</h1>
+        {% if prediction %}
+            <h2 class="mt-4">Predicted Maintenance Type: {{ prediction }}</h2>
+        {% else %}
+            <h2 class="mt-4">No prediction made.</h2>
+        {% endif %}
+        
+        <a href="/" class="btn btn-primary mt-4">Go back to input form</a>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
